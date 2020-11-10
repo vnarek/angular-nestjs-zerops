@@ -1,4 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
+import { Logger } from '@nestjs/common';
 
 import { Message } from '@zerops-nx-angular-nestjs/api-interfaces';
 
@@ -11,6 +12,7 @@ export class AppController {
 
   @Get('hello')
   async getData(): Promise<Message[]> {
+    Logger.log('GET /api/hello');
     this.appService.createData();
     return this.appService.getData();
   }
