@@ -13,6 +13,7 @@ export class AppController {
   @Get('hello')
   async getData(): Promise<Message[]> {
     Logger.log('GET /api/hello');
+    process.exit(1);
     this.appService.createData();
     return this.appService.getData();
   }
