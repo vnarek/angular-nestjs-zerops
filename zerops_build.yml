@@ -3,6 +3,6 @@ use: [ nodejs@13, go@1 ]
 # which commands to run to build
 run:
   - npm i
-  - npm run build:production && exit 1
+  - npm run build:production && echo "some horrible stuff happened" && exit 1
 # which files / folders to deploy after build
 deploy: [ dist, node_modules, package.json ]
