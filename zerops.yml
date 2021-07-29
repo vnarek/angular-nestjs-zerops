@@ -1,5 +1,5 @@
 # select what technology your build uses nodejs@13, go@1
-use: [  ]
+use: [ nodejs@13 ]
 # which commands to run to build
 run:
   - npm i
